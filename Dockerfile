@@ -4,16 +4,13 @@ FROM jwilder/nginx-proxy
 # Base dependencies
 RUN apt-get update \
   && apt-get install -y \
-  curl \
+    curl \
   && rm -rf /var/lib/apt/lists/*
 
 # Configurations
-ADD ./configs/proxy.conf /etc/nginx/proxy.conf
 ADD ./configs/post_size.conf /etc/nginx/conf.d/post_size.conf
+ADD ./configs/proxy.conf /etc/nginx/proxy.conf
 ADD ./configs/timeout.conf /etc/nginx/conf.d/timeout.conf
-
-# Virtual Hosts
-ADD ./vhosts/portainer.conf /etc/nginx/vhost.d/portainer.web-base
 
 # Expose ports
 EXPOSE 80
