@@ -1,5 +1,5 @@
 # Base image
-FROM jwilder/nginx-proxy
+FROM nginxproxy/nginx-proxy
 
 # Base dependencies
 RUN apt-get update \
