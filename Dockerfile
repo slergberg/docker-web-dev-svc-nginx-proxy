@@ -1,5 +1,5 @@
 # Base image
-FROM nginxproxy/nginx-proxy
+FROM nginxproxy/nginx-proxy:0.9.3-alpine
 
 # Base dependencies
 RUN apt-get update \
