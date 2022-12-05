@@ -1,5 +1,5 @@
 # Base image
-FROM nginxproxy/nginx-proxy:0.9.3
+FROM nginxproxy/nginx-proxy:1.0.3
 
 # Base dependencies
 RUN apt-get update \
